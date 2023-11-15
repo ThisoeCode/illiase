@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@200;400;700&family=Noto+Sans+KR:wght@200;400;700&family=Noto+Sans+SC:wght@200;400;700&family=Noto+Sans+TC:wght@200;400;700&family=Noto+Serif+JP:wght@200;400;700&family=Noto+Serif+KR:wght@200;400;700&family=Noto+Serif+SC:wght@200;400;700&family=Noto+Serif+TC:wght@200;400;700&family=Noto+Serif:ital,wght@0,200;0,400;0,700;0,900;1,200;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+@font-face {font-family: "ali Thin";font-weight: 250;src: url("//at.alicdn.com/wf/webfont/SF33ZFLfCrOX/noFG8bdabyjg.woff2") format("woff2"),url("//at.alicdn.com/wf/webfont/SF33ZFLfCrOX/wh56M2enoCzN.woff") format("woff");font-display: swap;}
+@font-face {font-family: "ali Regular";font-weight: 400;src: url("//at.alicdn.com/wf/webfont/SF33ZFLfCrOX/k6dmWju71eht.woff2") format("woff2"),url("//at.alicdn.com/wf/webfont/SF33ZFLfCrOX/JJ8E5wUWdWmL.woff") format("woff");font-display: swap;}
+@font-face {font-family: "ali Bold";font-weight: 700;src: url("//at.alicdn.com/wf/webfont/SF33ZFLfCrOX/u9bxKpcuiZpF.woff2") format("woff2"),url("//at.alicdn.com/wf/webfont/SF33ZFLfCrOX/oWBEHLWek2Yf.woff") format("woff");font-display: swap;}
+
+/*
+(italic; 100 300 400 700 900)
+font-family: 'Roboto', sans-serif;
+
+(200 400 700)
+font-family: 'Noto Sans JP', sans-serif;
+font-family: 'Noto Sans KR', sans-serif;
+font-family: 'Noto Sans SC', sans-serif;
+font-family: 'Noto Sans TC', sans-serif;
+font-family: 'Noto Serif JP', serif;
+font-family: 'Noto Serif KR', serif;
+font-family: 'Noto Serif SC', serif;
+font-family: 'Noto Serif TC', serif;
+
+(italic; 200 400 700 900)
+font-family: 'Noto Serif', serif;
+*/
+
+:root {
+  --serif:'Roboto','Noto Sans SC','Noto Sans JP','Noto Sans TC','Noto Sans KR', sans-serif;
+  --sans:'Noto Serif','Noto Serif SC','Noto Serif JP','Noto Serif ','Noto Serif',serif;
+  --illiase:#958b68;
+  --illiase-trans:#958b68b3;
+  --illiase-light:#e7ddb9;
+  --illiase-hover:#aef;
+  --illiase-header-height:54px;
+  --illiase-nav-width:99pt;
+}
+*{
+  margin:auto; padding:0; outline:0;
+  line-height:normal;
+  font-family:var(--serif);
+  font-weight:normal;
+  line-height:normal;
+  font-style: normal;
+  text-decoration:none;
+}a{color:inherit;display:inline;}
+
+/* ILLIASE */
+#illiase-body ::selection{background:var(--illiase-trans);color:#007}
+#illiase-body{
+  display:block;width:100vw;height:100vh;
+  background:url(/i/smol.png) fixed;
+}
+
+#illiase-body header{
+  z-index:99;
+  display:flex;align-items:center;
+  position:fixed;left:0;top:0;
+  width:100vw;height:var(--illiase-header-height);
+  background-color:#000c;
+}#illiase-body header .link{margin-left:18pt}
+#illiase-body header figure{
+  user-select:none;
+  display:flex;
+}
+#illiase-body header img{
+  width:33px;height:33px;
+  margin-right:7pt;
+}
+#illiase-body header figcaption{
+  font-size:33px;margin:0;
+  font-family: 'Noto Serif',serif;
+  padding-right:7pt;
+  color:#eee;
+}
+
+#illiase-body nav{
+  z-index:98;
+  display:flex;flex-direction:column;
+  position:fixed;left:0;top:0;
+  padding-top:calc(var(--illiase-header-height) + 27px);
+  width:var(--illiase-nav-width);
+  height:72vh;max-height:800px;
+  background:linear-gradient(#000 72%, #0000 99%);
+}
+#illiase-body nav .link{
+  display:flex;flex-direction:column;
+  min-width:111px;
+  margin:7px auto;
+  transition:.3s background-color ease;
+  padding:2px 3pt; border-radius: 9pt;
+}#illiase-body nav .link:hover{
+  background-color:#fafafa;
+}#illiase-body nav .link:hover h1{
+  color:#111;
+}
+#illiase-body nav h1{
+  font-weight:700;
+  transition:.3 ease;
+  font-size:16px;
+  font-family: 'Noto Serif',serif;
+  color:#ddd;
+}
+#illiase-body nav p{
+  font-size:12pt; line-height:1;
+  color:var(--illiase);
+  font-family: 'Noto Serif',serif;
+  padding-bottom:3px;
+}
+#illiase-body nav hr{
+  margin:0 auto;
+  width:54%;height:0;
+}
+#illiase-body main{
+  display:flex;flex-direction:column;
+  padding:var(--illiase-header-height) 0 0 var(--illiase-nav-width);
+}
+
+/* ILLIASE SURFACE, WORKS, FOOTER */
+.illiase-main{
+  display:flex;flex-direction:column;
+  width:100%; height:100%; 
+}
+.illiase-main article,
+#illiase-body footer{
+  width:72%; max-width:580px;
+  margin:3pt auto;padding:12pt;
+  background:#ccc;
+  color:#333;
+}
+.illiase-main article:first-child,
+#illiase-body footer{
+  border-radius:9pt 9pt 0 0;
+  margin-top:18pt;
+}
+.illiase-main article:last-child{
+  border-radius:0 0 9pt 9pt;
+}
+#illiase-body footer{
+  flex-direction:column;
+  background-color:#777c;
+  border-radius:9pt;
+  color:#eee;
+}
+#illiase-body footer p{
+  font-size:12px;
+}
+#illiase-body i{ /* inline Links */
+  color:var(--illiase-light);
+  text-decoration:underline;
+  transition:.2s color ease;
+}#illiase-body i:hover{color:var(--illiase-hover)}
+
+/* ILLIASE MEMBERS */
+#illiase-mem{
+  display:flex;flex-wrap:wrap;flex-direction:row;
+}
+#illiase-mem article{
+  display:flex;flex-direction:row;
+  justify-content:center;
+  width:144pt;
+  margin:9pt;padding:12pt;
+  background:#ccc;
+}
+#illiase-mem img{
+  width:144px;height:144px;
+  border-radius:99pt;
+}
+#illiase-mem h1{
+
+}
+#illiase-mem h2{
+
+}
+#illiase-mem h3{
+
+}
+#illiase-mem p{
+
+}
