@@ -1,8 +1,11 @@
+import Link from 'next/link'
+import Image from 'next/image';
+
 const Mem =_=> {
     return (
         <div id='illiase-mem'>
-            <Link href='/bn'><article>
-                <img src="/ava/bn.jpg" alt="BN" />
+            <Link href='/bn' style={{background: 'linear-gradient(to right, #75ff7f, #85ffaa)'}}>
+                <Image src="/ava/bn.jpg"  width='144' height='144' />
                 <section>
                     <div>
                         <h1>BN</h1>
@@ -10,9 +13,9 @@ const Mem =_=> {
                     </div>
                     <p>discriptions</p>
                 </section>
-            </article></Link>
-            <Link href='/bistard'><article>
-                <img src="/ava/bistard.jpg" alt="bistard" />
+            </Link>
+            <Link href='/bistard' style={{background: 'linear-gradient(to right, #ffaeaa, #ffeaaa)'}}>
+                <Image src="/ava/bistard.jpg" width='144' height='144' />
                 <section>
                     <div>
                         <h1>bistard</h1>
@@ -20,9 +23,9 @@ const Mem =_=> {
                     </div>
                     <p>discriptions</p>
                 </section>
-            </article></Link>
-            <Link href='/tsk'><article>
-                <img src="/ava/tsk.jpg" alt="tsk" />
+            </Link>
+            <Link href='/tsk' style={{background: 'linear-gradient(to right, #5757ff, #8a8aff)'}}>
+                <Image src="/ava/tsk.jpg"  width='144' height='144' />
                 <section>
                     <div>
                         <h1>TSK</h1>
@@ -30,9 +33,9 @@ const Mem =_=> {
                     </div>
                     <p>discriptions</p>
                 </section>
-            </article></Link>
-            <Link href='/jerry'><article>
-                <img src="/ava/jerry.jpg" alt="jerry" />
+            </Link>
+            <Link href='/jerry' style={{background: 'linear-gradient(to right, #75c5ff, aqua)'}}>
+                <Image src="/ava/jerry.jpg"  width='144' height='144' />
                 <section>
                     <div>
                         <h1>Jerry</h1>
@@ -40,9 +43,9 @@ const Mem =_=> {
                     </div>
                     <p>discriptions</p>
                 </section>
-            </article></Link>
-            <Link href='/jeff'><article>
-                <img src="/ava/jeff.jpg" alt="jeff" />
+            </Link>
+            <Link href='/jeff' style={{background: 'linear-gradient(to right, #789, #aab)'}}>
+                <Image src="/ava/jeff.jpg"  width='144' height='144' />
                 <section>
                     <div>
                         <h1>Jeff</h1>
@@ -50,7 +53,7 @@ const Mem =_=> {
                     </div>
                     <p>discriptions</p>
                 </section>
-            </article></Link>
+            </Link>
         </div>
     );
 }

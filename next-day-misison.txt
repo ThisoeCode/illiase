@@ -1,0 +1,4 @@
+next day mission:
+
+	add stylings to /memebers
+    make jsx of /works

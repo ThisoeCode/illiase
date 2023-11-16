@@ -45,7 +45,8 @@ font-family: 'Noto Serif', serif;
 /* ILLIASE */
 #illiase-body ::selection{background:var(--illiase-trans);color:#007}
 #illiase-body{
-  display:block;width:100vw;height:100vh;
+  display:block;width:auto;height:auto;
+  min-width: 100vw; min-height: 100vh;
   background:url(/i/smol.png) fixed;
 }
 
@@ -111,12 +112,14 @@ font-family: 'Noto Serif', serif;
 #illiase-body main{
   display:flex;flex-direction:column;
   padding:var(--illiase-header-height) 0 0 var(--illiase-nav-width);
+  min-height:calc(100vh - var(--illiase-header-height));
 }
 
 /* ILLIASE SURFACE, WORKS, FOOTER */
 .illiase-main{
   display:flex;flex-direction:column;
-  width:100%; height:100%; 
+  width:100%; height:100%;
+  margin: 0 auto;
 }
 .illiase-main article,
 #illiase-body footer{
@@ -125,8 +128,7 @@ font-family: 'Noto Serif', serif;
   background:#ccc;
   color:#333;
 }
-.illiase-main article:first-child,
-#illiase-body footer{
+.illiase-main article:first-child{
   border-radius:9pt 9pt 0 0;
   margin-top:18pt;
 }
@@ -135,8 +137,11 @@ font-family: 'Noto Serif', serif;
 }
 #illiase-body footer{
   flex-direction:column;
+  height: 30px;
+  border-radius:9pt 9pt 0 0;
+  margin:18pt auto 0;
+  position:sticky; top:calc(100vh - 70px);
   background-color:#777c;
-  border-radius:9pt;
   color:#eee;
 }
 #illiase-body footer p{
@@ -151,20 +156,39 @@ font-family: 'Noto Serif', serif;
 /* ILLIASE MEMBERS */
 #illiase-mem{
   display:flex;flex-wrap:wrap;flex-direction:row;
+  min-width:300px;
+  overflow:hidden;
 }
-#illiase-mem article{
+#illiase-mem a{
   display:flex;flex-direction:row;
   justify-content:center;
-  width:144pt;
+  min-width:288px;
+  height:auto;
   margin:9pt;padding:12pt;
-  background:#ccc;
+  border-radius:12pt;
+  background-color:#ccc;
+  transition:.2s transform ease,.2s box-shadow;
+}#illiase-mem a:hover{
+  transform: translate(-3pt, -3pt);
+  box-shadow: 3pt 3pt 7pt #007;
+}#illiase-mem a:active{
+  transform: translate(-2px, -1px);
+  box-shadow:1px 1px #007;
 }
 #illiase-mem img{
-  width:144px;height:144px;
   border-radius:99pt;
+  background-color:linear-gradient;
+  box-shadow:0 3px 7pt #111a;
+}
+#illiase-mem section{
+  display:flex;flex-direction:column;
+}
+#illiase-mem section div{
+  display:flex; flex-direction:row;
 }
 #illiase-mem h1{
-
+  font-family:var(--sans);
+  font-size:27pt;
 }
 #illiase-mem h2{
 
