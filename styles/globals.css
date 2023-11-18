@@ -156,12 +156,14 @@ font-family: 'Noto Serif', serif;
 /* ILLIASE MEMBERS */
 #illiase-mem{
   display:flex;flex-wrap:wrap;flex-direction:row;
+  justify-content:center;
   min-width:300px;
   overflow:hidden;
+  padding:0 9pt;
 }
 #illiase-mem a{
   display:flex;flex-direction:row;
-  justify-content:center;
+  justify-content:flex-start;
   min-width:288px;
   height:auto;
   margin:9pt;padding:12pt;
@@ -176,22 +178,32 @@ font-family: 'Noto Serif', serif;
   box-shadow:1px 1px #007;
 }
 #illiase-mem img{
+  margin:0 18px 0 0;
   border-radius:99pt;
   background-color:linear-gradient;
   box-shadow:0 3px 7pt #111a;
 }
 #illiase-mem section{
   display:flex;flex-direction:column;
+  text-wrap:nowrap;
+  margin:0 9pt 0 0; justify-content:space-around;
 }
-#illiase-mem section div{
+#illiase-mem div{
   display:flex; flex-direction:row;
+  align-items: baseline;
 }
 #illiase-mem h1{
+  margin:0;
   font-family:var(--sans);
   font-size:27pt;
+  font-weight:normal;
 }
 #illiase-mem h2{
-
+  margin:0;
+  margin-left:3pt;
+  font-family:var(--sans);
+  font-size:18px;
+  font-weight:bold;
 }
 #illiase-mem h3{
 
