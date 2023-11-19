@@ -1,9 +1,5 @@
+/*** FONT ***/
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@200;400;700&family=Noto+Sans+KR:wght@200;400;700&family=Noto+Sans+SC:wght@200;400;700&family=Noto+Sans+TC:wght@200;400;700&family=Noto+Serif+JP:wght@200;400;700&family=Noto+Serif+KR:wght@200;400;700&family=Noto+Serif+SC:wght@200;400;700&family=Noto+Serif+TC:wght@200;400;700&family=Noto+Serif:ital,wght@0,200;0,400;0,700;0,900;1,200;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-
-@font-face {font-family: "ali Thin";font-weight: 250;src: url("//at.alicdn.com/wf/webfont/SF33ZFLfCrOX/noFG8bdabyjg.woff2") format("woff2"),url("//at.alicdn.com/wf/webfont/SF33ZFLfCrOX/wh56M2enoCzN.woff") format("woff");font-display: swap;}
-@font-face {font-family: "ali Regular";font-weight: 400;src: url("//at.alicdn.com/wf/webfont/SF33ZFLfCrOX/k6dmWju71eht.woff2") format("woff2"),url("//at.alicdn.com/wf/webfont/SF33ZFLfCrOX/JJ8E5wUWdWmL.woff") format("woff");font-display: swap;}
-@font-face {font-family: "ali Bold";font-weight: 700;src: url("//at.alicdn.com/wf/webfont/SF33ZFLfCrOX/u9bxKpcuiZpF.woff2") format("woff2"),url("//at.alicdn.com/wf/webfont/SF33ZFLfCrOX/oWBEHLWek2Yf.woff") format("woff");font-display: swap;}
-
 /*
 (italic; 100 300 400 700 900)
 font-family: 'Roboto', sans-serif;
@@ -22,6 +18,9 @@ font-family: 'Noto Serif TC', serif;
 font-family: 'Noto Serif', serif;
 */
 
+
+
+/*** GLOBAL ***/
 :root {
   --serif:'Roboto','Noto Sans SC','Noto Sans JP','Noto Sans TC','Noto Sans KR', sans-serif;
   --sans:'Noto Serif','Noto Serif SC','Noto Serif JP','Noto Serif ','Noto Serif',serif;
@@ -34,7 +33,6 @@ font-family: 'Noto Serif', serif;
 }
 *{
   margin:auto; padding:0; outline:0;
-  line-height:normal;
   font-family:var(--serif);
   font-weight:normal;
   line-height:normal;
@@ -42,21 +40,25 @@ font-family: 'Noto Serif', serif;
   text-decoration:none;
 }a{color:inherit;display:inline;}
 
-/* ILLIASE */
+
+
+/*** ILLIASE ***/
 #illiase-body ::selection{background:var(--illiase-trans);color:#007}
 #illiase-body{
-  display:block;width:auto;height:auto;
-  min-width: 100vw; min-height: 100vh;
+  display:block;width:auto;height:auto;min-height: 100vh;
+  min-width:calc(100vh - var(--illiase-nav-width));
   background:url(/i/smol.png) fixed;
 }
 
+/* ILLIASE HEADER */
 #illiase-body header{
   z-index:99;
   display:flex;align-items:center;
   position:fixed;left:0;top:0;
   width:100vw;height:var(--illiase-header-height);
   background-color:#000c;
-}#illiase-body header .link{margin-left:18pt}
+}#illiase-body header .link,
+#illiase-body header .actlink{margin-left:18pt}
 #illiase-body header figure{
   user-select:none;
   display:flex;
@@ -72,6 +74,7 @@ font-family: 'Noto Serif', serif;
   color:#eee;
 }
 
+/* ILLIASE NAV */
 #illiase-body nav{
   z-index:98;
   display:flex;flex-direction:column;
@@ -81,16 +84,21 @@ font-family: 'Noto Serif', serif;
   height:72vh;max-height:800px;
   background:linear-gradient(#000 72%, #0000 99%);
 }
-#illiase-body nav .link{
+#illiase-body nav .link,
+#illiase-body nav .actlink{
   display:flex;flex-direction:column;
   min-width:111px;
   margin:7px auto;
   transition:.3s background-color ease;
   padding:2px 3pt; border-radius: 9pt;
 }#illiase-body nav .link:hover{
-  background-color:#fafafa;
+  background-color:#ccc;
 }#illiase-body nav .link:hover h1{
   color:#111;
+}
+#illiase-body nav .actlink{
+  background-color:var(--illiase);
+  pointer-events:none;
 }
 #illiase-body nav h1{
   font-weight:700;
@@ -99,59 +107,82 @@ font-family: 'Noto Serif', serif;
   font-family: 'Noto Serif',serif;
   color:#ddd;
 }
+#illiase-body nav .actlink h1{color:#fff}
 #illiase-body nav p{
   font-size:12pt; line-height:1;
   color:var(--illiase);
   font-family: 'Noto Serif',serif;
   padding-bottom:3px;
 }
+#illiase-body nav .actlink p{color:#eed}
+#illiase-body nav .actlink:hover p{color:var(--illiase)}
 #illiase-body nav hr{
   margin:0 auto;
   width:54%;height:0;
 }
+
+/* ILLIASE <main> */
 #illiase-body main{
   display:flex;flex-direction:column;
   padding:var(--illiase-header-height) 0 0 var(--illiase-nav-width);
   min-height:calc(100vh - var(--illiase-header-height));
 }
 
-/* ILLIASE SURFACE, WORKS, FOOTER */
-.illiase-main{
-  display:flex;flex-direction:column;
-  width:100%; height:100%;
-  margin: 0 auto;
-}
-.illiase-main article,
-#illiase-body footer{
-  width:72%; max-width:580px;
-  margin:3pt auto;padding:12pt;
-  background:#ccc;
-  color:#333;
-}
-.illiase-main article:first-child{
-  border-radius:9pt 9pt 0 0;
-  margin-top:18pt;
-}
-.illiase-main article:last-child{
-  border-radius:0 0 9pt 9pt;
-}
-#illiase-body footer{
-  flex-direction:column;
+/* ILLIASE FOOTER */
+#illiase-body footer{ /* ctrlF "illiase-body footer{" */
   height: 30px;
   border-radius:9pt 9pt 0 0;
-  margin:18pt auto 0;
   position:sticky; top:calc(100vh - 70px);
-  background-color:#777c;
-  color:#eee;
 }
 #illiase-body footer p{
   font-size:12px;
 }
 #illiase-body i{ /* inline Links */
-  color:var(--illiase-light);
   text-decoration:underline;
   transition:.2s color ease;
 }#illiase-body i:hover{color:var(--illiase-hover)}
+
+/* ILLIASE BLOGS (SURFACE & WORKS) */
+#illiase-main{
+  display:flex;flex-direction:column;
+  width:100%; height:100%;
+  margin: 0 auto auto;
+}
+#illiase-main article,
+#illiase-main figure,
+#illiase-body footer{
+  display:flex; flex-direction:column;
+  width:72%; max-width:555px;
+  margin:7pt auto 0;padding:12pt 21pt 27pt;
+  background:#ccc;
+  color:#333;
+}#illiase-body footer{
+  margin-top:12pt;
+  padding:12pt 18pt;
+  background-color:#777c; color:#eee;
+}
+#illiase-main figure{padding-bottom:16pt}
+#illiase-main>:first-child{
+  border-radius:9pt 9pt 0 0;
+  margin-top:18pt;
+}
+#illiase-main>:last-child{
+  border-radius:0 0 9pt 9pt;
+}
+#illiase-main article h1{
+  font-size:18pt; line-height:2;
+  font-family:var(--sans);
+}
+#illiase-main article p,
+#illiase-main figcaption{
+  font-size: 12pt;
+}
+#illiase-main figure img{
+  width:auto; height:auto;
+  max-width:100%; max-height:58vh;
+  padding:3pt 0 9pt;
+}
+
 
 /* ILLIASE MEMBERS */
 #illiase-mem{
@@ -189,14 +220,13 @@ font-family: 'Noto Serif', serif;
   margin:0 9pt 0 0; justify-content:space-around;
 }
 #illiase-mem div{
-  display:flex; flex-direction:row;
+  display:flex; flex-direction:column;
   align-items: baseline;
 }
 #illiase-mem h1{
   margin:0;
   font-family:var(--sans);
   font-size:27pt;
-  font-weight:normal;
 }
 #illiase-mem h2{
   margin:0;
@@ -204,10 +234,4 @@ font-family: 'Noto Serif', serif;
   font-family:var(--sans);
   font-size:18px;
   font-weight:bold;
-}
-#illiase-mem h3{
-
-}
-#illiase-mem p{
-
 }
