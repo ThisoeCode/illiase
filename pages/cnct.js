@@ -1,7 +1,5 @@
-const Cnct =_=> {
+export default _=> {
     return (
-        <p>cnct</p>
+        <div id='illiase-cnct'></div>
     );
 }
- 
-export default Cnct;

@@ -2,7 +2,7 @@
 // import Menu from "./menu.js";
 // import F_ from "./_f.js";
 
-const Tmpl = ({children}) => {
+export default ({children}) => {
     return (
         <div>
             <H_ />
@@ -12,5 +12,3 @@ const Tmpl = ({children}) => {
         </div>
     );
 }
- 
-export default Tmpl;

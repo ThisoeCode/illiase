@@ -1,4 +1,4 @@
-const Works =_=> {
+export default _=> {
     return (
         <div id="illiase-main">
           <article>
@@ -18,5 +18,3 @@ const Works =_=> {
         </div>
     );
 }
- 
-export default Works;

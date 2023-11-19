@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 
-const Mem =_=> {
+export default _=> {
     return (
         <div id='illiase-mem'>
             <Link href='/bn' style={{background: 'linear-gradient(to right, #75ff7f, #85ffaa)'}}>
@@ -71,5 +71,3 @@ const Mem =_=> {
         </div>
     );
 }
- 
-export default Mem;

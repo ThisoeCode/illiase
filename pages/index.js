@@ -1,4 +1,4 @@
-export default function Home() {
+export default _=>{
   return (
     <div id="illiase-main">
       <article>

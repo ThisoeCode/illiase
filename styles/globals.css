@@ -28,6 +28,7 @@ font-family: 'Noto Serif', serif;
   --illiase-trans:#958b68b3;
   --illiase-light:#e7ddb9;
   --illiase-hover:#aef;
+  --illiase-monochro:#FFE37F;
   --illiase-header-height:54px;
   --illiase-nav-width:99pt;
 }
@@ -52,17 +53,14 @@ font-family: 'Noto Serif', serif;
 
 /* ILLIASE HEADER */
 #illiase-body header{
-  z-index:99;
+  z-index:99; user-select:none;
   display:flex;align-items:center;
   position:fixed;left:0;top:0;
   width:100vw;height:var(--illiase-header-height);
   background-color:#000c;
 }#illiase-body header .link,
 #illiase-body header .actlink{margin-left:18pt}
-#illiase-body header figure{
-  user-select:none;
-  display:flex;
-}
+#illiase-body header figure{display:flex}
 #illiase-body header img{
   width:33px;height:33px;
   margin-right:7pt;
@@ -76,7 +74,7 @@ font-family: 'Noto Serif', serif;
 
 /* ILLIASE NAV */
 #illiase-body nav{
-  z-index:98;
+  z-index:98; user-select:none;
   display:flex;flex-direction:column;
   position:fixed;left:0;top:0;
   padding-top:calc(var(--illiase-header-height) + 27px);
@@ -147,19 +145,29 @@ font-family: 'Noto Serif', serif;
   display:flex;flex-direction:column;
   width:100%; height:100%;
   margin: 0 auto auto;
+  user-select:none;
 }
 #illiase-main article,
 #illiase-main figure,
 #illiase-body footer{
   display:flex; flex-direction:column;
   width:72%; max-width:555px;
-  margin:7pt auto 0;padding:12pt 21pt 27pt;
-  background:#ccc;
+  margin:7pt auto 0;
+  background:#ccc; padding:9pt 18pt 21pt;
+  border:#ccc solid 3pt;
+  transition:border-color .5s ease;
   color:#333;
+  cursor:pointer;
+}
+#illiase-main article:hover,
+#illiase-main figure:hover{
+  border-color:var(--illiase-monochro);
 }#illiase-body footer{
   margin-top:12pt;
   padding:12pt 18pt;
+  border:0;
   background-color:#777c; color:#eee;
+  cursor:auto;
 }
 #illiase-main figure{padding-bottom:16pt}
 #illiase-main>:first-child{

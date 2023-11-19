@@ -1,7 +1,5 @@
-const Login =_=> {
+export default _=> {
     return (
         <p>Login</p>
     );
 }
- 
-export default Login;
