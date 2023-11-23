@@ -145,7 +145,6 @@ font-family: 'Noto Serif', serif;
   display:flex;flex-direction:column;
   width:100%; height:100%;
   margin: 0 auto auto;
-  user-select:none;
 }
 #illiase-main article,
 #illiase-main figure,
@@ -153,15 +152,17 @@ font-family: 'Noto Serif', serif;
   display:flex; flex-direction:column;
   width:72%; max-width:555px;
   margin:7pt auto 0;
-  background:#ccc; padding:9pt 18pt 21pt;
-  border:#ccc solid 3pt;
-  transition:border-color .5s ease;
+  background:#ccc; padding:9pt 21pt 27pt;
+  transition:background-color .5s ease;
   color:#333;
   cursor:pointer;
 }
 #illiase-main article:hover,
 #illiase-main figure:hover{
-  border-color:var(--illiase-monochro);
+  background-color:#eee;
+}#illiase-main article:active,
+#illiase-main figure:active{
+  background-color:#ddd;
 }#illiase-body footer{
   margin-top:12pt;
   padding:12pt 18pt;
