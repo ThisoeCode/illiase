@@ -9,6 +9,7 @@ export default _=> {
         {value:'jeff',lable: <><img src="/ava/jeff.png" alt="Jeff" /><span>Jeff</span></>},
     ]
     return (<div id='illiase-login'>
+    <h1 style={{backgroundColor:'white',fontWeight:'bold',color:'tomato'}}>---this page is not done yet---</h1>
     <h1>Member Login</h1>
     <h2>Login ut Membrum</h2>
     <div>

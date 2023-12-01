@@ -39,7 +39,8 @@ font-family: 'Noto Serif', serif;
   line-height:normal;
   font-style: normal;
   text-decoration:none;
-}a{color:inherit;display:inline;}
+}a{color:inherit;display:inline}
+img{user-select:none}
 
 
 
@@ -90,7 +91,7 @@ font-family: 'Noto Serif', serif;
   transition:.3s background-color ease;
   padding:2px 3pt; border-radius: 9pt;
 }#illiase-body nav .link:hover{
-  background-color:#ccc;
+  background-color:#eee;
 }#illiase-body nav .link:hover h1{
   color:#111;
 }
@@ -150,7 +151,7 @@ font-family: 'Noto Serif', serif;
 #illiase-main figure,
 #illiase-body footer{
   display:flex; flex-direction:column;
-  width:72%; max-width:555px;
+  width:72%; max-width:500pt;
   margin:7pt auto 0;
   background:#ccc; padding:9pt 21pt 27pt;
   transition:background-color .5s ease;
@@ -182,9 +183,11 @@ font-family: 'Noto Serif', serif;
   font-size:18pt; line-height:2;
   font-family:var(--sans);
 }
-#illiase-main article p,
-#illiase-main figcaption{
+#illiase-main article p{
   font-size: 12pt;
+}#illiase-main figcaption{
+  font-size: 12pt;
+  text-align:center;
 }
 #illiase-main figure img{
   width:auto; height:auto;

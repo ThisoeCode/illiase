@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import '../styles/globals.css'
 import IlliaseTemplate from '../template/illiase/tmpl';
 import TSKTemplate from '../template/tsk/tmpl';
@@ -15,7 +16,15 @@ function Illiase({ Component, pageProps, router }) {
     case '/works':
     case '/login':
     case '/cnct':
-      return <IlliaseTemplate><Component {...pageProps} /></IlliaseTemplate>;
+      return (
+      <IlliaseTemplate>
+        <Head>
+          <title>Illiase</title>
+          <link rel="icon" href="/i/con2.png" />
+        </Head>
+        <Component {...pageProps} />
+      </IlliaseTemplate>)
+
     default: switch (true) {
       case under('/bistard'):
         return <Component {...pageProps} />;
