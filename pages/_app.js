@@ -21,6 +21,8 @@ function Illiase({ Component, pageProps, router }) {
         <Head>
           <title>Illiase</title>
           <link rel="icon" href="/i/con2.png" />
+          {/* prevent white-screen flash before bgi loaded */}
+          <style>{`body{background:#000}`}</style>
         </Head>
         <Component {...pageProps} />
       </IlliaseTemplate>)
