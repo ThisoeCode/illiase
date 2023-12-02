@@ -31,7 +31,7 @@ font-family: 'Noto Serif', serif;
   --illiase-monochro:#FFE37F;
   --illiase-header-height:54px;
   --illiase-nav-width:99pt;
-}
+}a.a{color:inherit;display:inline}
 *{
   margin:auto; padding:0; outline:0;
   font-family:var(--serif);
@@ -39,7 +39,7 @@ font-family: 'Noto Serif', serif;
   line-height:normal;
   font-style: normal;
   text-decoration:none;
-}a{color:inherit;display:inline}
+}
 img{user-select:none}
 
 
@@ -140,6 +140,7 @@ img{user-select:none}
   text-decoration:underline;
   transition:.2s color ease;
 }#illiase-body i:hover{color:var(--illiase-hover)}
+i a{color:inherit;display:inline}
 
 /* ILLIASE BLOGS (SURFACE & WORKS) */
 #illiase-main{
@@ -160,10 +161,10 @@ img{user-select:none}
 }
 #illiase-main article:hover,
 #illiase-main figure:hover{
-  background-color:#eee;
+  background-color:#e1e1e1;
 }#illiase-main article:active,
 #illiase-main figure:active{
-  background-color:#ddd;
+  background-color:#d7d7d7;
 }#illiase-body footer{
   margin-top:12pt;
   padding:12pt 18pt;

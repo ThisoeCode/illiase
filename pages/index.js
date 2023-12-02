@@ -1,5 +1,10 @@
-export default _=>{
-  return (
+import { useRouter } from 'next/router'
+export default ({works})=>{
+  const r=useRouter()
+  const link=_=>{
+    r.push(`/works/${works.id}`)
+  }
+  return(
     <div id="illiase-main">
       <article>
         <h1>测试-标题</h1>
