@@ -1,5 +1,5 @@
 ### ILLIASE ignores config
-.txt
+*.txt
 pages/api/
 
 
