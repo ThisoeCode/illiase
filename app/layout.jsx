@@ -1,18 +1,25 @@
 import './globals.css'
-import _h from "./components/illiase/_h"
-import _f from "./components/illiase/_f"
-
-
+import H from "./components/illiase/_h"
+import F from "./components/illiase/_f"
+import Nav from "./components/illiase/menu"
+ 
 export const metadata = {
-  title: 'Illiase',
-  description: 'Illiase',
+  title: {
+    template: '%s | ILLIASE',
+    default: 'ILLIASE',
+  },
+  author: 'Thisoe', discription: 'ILLIASE Chronicles is a private sandbox blog.', keywords: '伊利亚斯编年史,Illiase,bistard,Thisoe,TSK',
+
 }
 
 export default function IlliaseLayout({ children }) {
   return (
     <html lang="en">
-      <body id='illiase'>
+      <body>
+        <H/>
+        <Nav/>
         {children}
+        <F/>
       </body>
     </html>
   )

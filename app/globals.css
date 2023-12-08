@@ -1,0 +1,154 @@
+/*** FONT ***/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@200;400;700&family=Noto+Sans+KR:wght@200;400;700&family=Noto+Sans+SC:wght@200;400;700&family=Noto+Sans+TC:wght@200;400;700&family=Noto+Serif+JP:wght@200;400;700&family=Noto+Serif+KR:wght@200;400;700&family=Noto+Serif+SC:wght@200;400;700&family=Noto+Serif+TC:wght@200;400;700&family=Noto+Serif:ital,wght@0,200;0,400;0,700;0,900;1,200;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+/*
+(italic; 100 300 400 700 900)
+font-family: 'Roboto', sans-serif;
+
+(200 400 700)
+font-family: 'Noto Sans JP', sans-serif;
+font-family: 'Noto Sans KR', sans-serif;
+font-family: 'Noto Sans SC', sans-serif;
+font-family: 'Noto Sans TC', sans-serif;
+font-family: 'Noto Serif JP', serif;
+font-family: 'Noto Serif KR', serif;
+font-family: 'Noto Serif SC', serif;
+font-family: 'Noto Serif TC', serif;
+
+(italic; 200 400 700 900)
+font-family: 'Noto Serif', serif;
+*/
+
+
+
+/*** GLOBAL ***/
+/* Reset by - Tailwind CSS Preflight */
+blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,ol,p,pre,ul{margin:0}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}ol,ul{list-style:none;padding:0}audio,canvas,embed,iframe,img,object,svg,video{display:block}img,video{max-width:100%;height:auto}*,::after,::before{border-width:0;border-style:solid;border-color:theme('borderColor.DEFAULT', currentColor)}.google-map *{border-style:none}
+
+/* var */
+:root {
+  --serif:'Roboto','Noto Sans SC','Noto Sans JP','Noto Sans TC','Noto Sans KR', sans-serif;
+  --sans:'Noto Serif','Noto Serif SC','Noto Serif JP','Noto Serif ','Noto Serif',serif;
+  --illiase:#958b68;
+  --illiase-trans:#958b68b3;
+  --illiase-light:#e7ddb9;
+  --illiase-hover:#aef;
+  --illiase-monochro:#FFE37F;
+  --illiase-header-height:54px;
+  --illiase-nav-width:99pt;
+}
+/* reset */
+*{
+  padding:0; outline:0;
+  text-decoration:none;
+  line-height:normal;
+  font-weight:normal;
+  font-style: normal;
+  font-family:var(--serif);
+}
+Image, img{user-select:none}
+*::selection{
+  background:var(--illiase-trans);
+  color:#007;
+  text-shadow: 1px 1px var(--illiase-light);
+}
+
+
+
+/* HEADER */
+header{
+  z-index:99; user-select:none;
+  display:flex;align-items:center;
+  position:fixed;left:0;top:0;
+  width:100vw;height:var(--illiase-header-height);
+  background-color:#000c;
+}header .link,
+header .actlink{margin-left:18pt}
+header figure{display:flex}
+header img{
+  width:33px;height:33px;
+  margin-right:7pt;
+}
+header figcaption{
+  font-size:33px;margin:0;
+  font-family: 'Noto Serif',serif;
+  padding-right:7pt;
+  color:#eee;
+}
+
+
+
+/* FOOTER */
+footer{
+  display:flex; flex-direction:column;
+  width:72%; max-width:500pt;
+  margin:12pt auto 0;
+  background:#ccc; padding:9pt 21pt 27pt;
+  transition:background-color .5s ease;
+  color:#333;
+  cursor:pointer;
+  padding:12pt 18pt;
+  border:0;
+  background-color:#777c;
+  color:#eee;
+}
+footer p{font-size:12px}
+
+
+
+/* MENU */
+nav{
+  z-index:98; user-select:none;
+  display:flex;flex-direction:column;
+  position:fixed;left:0;top:0;
+  padding-top:calc(var(--illiase-header-height) + 27px);
+  width:var(--illiase-nav-width);
+  height:72vh;max-height:800px;
+  background:linear-gradient(#000 72%, #0000 99%);
+}
+nav .link, nav .actlink{
+  display:flex;flex-direction:column;
+  min-width:111px;
+  margin:7px auto;
+  transition:.3s background-color ease;
+  padding:2px 3pt; border-radius: 9pt;
+}nav .link:hover{
+  background-color:#eee;
+}nav .link:hover h1{
+  color:#111;
+}
+nav .actlink{
+  background-color:var(--illiase);
+  pointer-events:none;
+}
+nav h1{
+  font-weight:700;
+  transition:.3 ease;
+  font-size:16px;
+  font-family: 'Noto Serif',serif;
+  color:#ddd;
+}nav .actlink h1{color:#fff}
+nav p{
+  font-size:12pt; line-height:1;
+  color:var(--illiase);
+  font-family: 'Noto Serif',serif;
+  padding-bottom:3px;
+}nav .actlink p{color:#eed}
+nav .actlink:hover p{color:var(--illiase)}
+nav hr{
+  margin:0 auto;
+  width:54%;height:0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
