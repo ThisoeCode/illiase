@@ -1,4 +1,6 @@
 import './globals.css'
+import _h from "./components/illiase/_h"
+import _f from "./components/illiase/_f"
 
 
 export const metadata = {
@@ -9,9 +11,9 @@ export const metadata = {
 export default function IlliaseLayout({ children }) {
   return (
     <html lang="en">
-      <body>
+      <body id='illiase'>
         {children}
-        </body>
+      </body>
     </html>
   )
 }
