@@ -8,8 +8,9 @@ export default function _h() {
       <Image
         src="/i/con2.png"
         alt="Illiase icon"
+        width={33} height={33}
       />
-      <figcaption>ILLIASE</figcaption>
+      <figcaption>Illiase</figcaption>
     </figure></Link>
   </header>
   )

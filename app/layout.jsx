@@ -5,10 +5,10 @@ import Nav from "./components/illiase/menu"
  
 export const metadata = {
   title: {
-    template: '%s | ILLIASE',
-    default: 'ILLIASE',
+    template: '%s | Illiase',
+    default: 'Illiase',
   },
-  author: 'Thisoe', discription: 'ILLIASE Chronicles is a private sandbox blog.', keywords: '伊利亚斯编年史,Illiase,bistard,Thisoe,TSK',
+  author: 'Thisoe', discription: 'Illiase Chronicles is a private sandbox blog.', keywords: '伊利亚斯编年史,Illiase,bistard,Thisoe,TSK',
 
 }
 
@@ -18,8 +18,10 @@ export default function IlliaseLayout({ children }) {
       <body>
         <H/>
         <Nav/>
-        {children}
-        <F/>
+        <main>
+          {children}
+          <F/>
+        </main>
       </body>
     </html>
   )

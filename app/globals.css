@@ -37,7 +37,9 @@ blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,ol,p,pre,ul{margin:0}h1,h2,h3,h4,h5
   --illiase-nav-width:99pt;
 }
 /* reset */
+body{background-color:black}
 *{
+  margin:auto; /* DANGER */
   padding:0; outline:0;
   text-decoration:none;
   line-height:normal;
@@ -51,10 +53,14 @@ Image, img{user-select:none}
   color:#007;
   text-shadow: 1px 1px var(--illiase-light);
 }
+/* @media (prefers-color-scheme: dark) {
+  body {background-color:white}
+} */
 
 
 
-/* HEADER */
+/*** LAYOUT ***/
+/* header */
 header{
   z-index:99; user-select:none;
   display:flex;align-items:center;
@@ -69,33 +75,14 @@ header img{
   margin-right:7pt;
 }
 header figcaption{
+  line-height:1;
   font-size:33px;margin:0;
   font-family: 'Noto Serif',serif;
   padding-right:7pt;
   color:#eee;
 }
 
-
-
-/* FOOTER */
-footer{
-  display:flex; flex-direction:column;
-  width:72%; max-width:500pt;
-  margin:12pt auto 0;
-  background:#ccc; padding:9pt 21pt 27pt;
-  transition:background-color .5s ease;
-  color:#333;
-  cursor:pointer;
-  padding:12pt 18pt;
-  border:0;
-  background-color:#777c;
-  color:#eee;
-}
-footer p{font-size:12px}
-
-
-
-/* MENU */
+/* menu */
 nav{
   z-index:98; user-select:none;
   display:flex;flex-direction:column;
@@ -104,6 +91,7 @@ nav{
   width:var(--illiase-nav-width);
   height:72vh;max-height:800px;
   background:linear-gradient(#000 72%, #0000 99%);
+  text-align:center;
 }
 nav .link, nav .actlink{
   display:flex;flex-direction:column;
@@ -122,7 +110,6 @@ nav .actlink{
 }
 nav h1{
   font-weight:700;
-  transition:.3 ease;
   font-size:16px;
   font-family: 'Noto Serif',serif;
   color:#ddd;
@@ -137,8 +124,49 @@ nav .actlink:hover p{color:var(--illiase)}
 nav hr{
   margin:0 auto;
   width:54%;height:0;
+  border:white inset thin;
 }
 
+/* main */
+body{
+  display:block;width:auto;height:auto;min-height: 100vh;
+  min-width:calc(100vh - var(--illiase-nav-width));
+  background:url(/i/smol.png) fixed;
+}
+main{
+  display:flex;flex-direction:column;
+  padding:var(--illiase-header-height) 0 0 var(--illiase-nav-width);
+  min-height:calc(100vh - var(--illiase-header-height));
+}
+
+/* main-content */
+main article, main figure, footer{ /* __FOOTER-INDEX--CONTENT__ Please CtrlF "footer{" */
+  display:flex; flex-direction:column;
+  width:72%; max-width:500pt;
+  margin:7pt auto 0;
+  background:#ccc; padding:9pt 21pt 27pt;
+  transition:background-color .5s ease;
+  color:#333;
+  cursor:pointer;
+}
+i{ /* inline Links */
+  text-decoration:underline;
+  transition:.2s color ease;
+}
+
+/* footer */
+footer{ /* __FOOTER-INDEX--LAST__ Please CtrlF "footer{" */
+  height: 30px;
+  border-radius:9pt 9pt 0 0;
+  position:sticky; top:calc(100vh - 70px);
+  margin-top:12pt;
+  padding:12pt 18pt;
+  border:0;
+  background-color:#777c; color:#eee;
+  cursor:auto;
+  text-align:center;
+}
+footer p{font-size:12px}
 
 
 
