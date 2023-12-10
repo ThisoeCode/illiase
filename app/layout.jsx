@@ -1,8 +1,9 @@
 import './globals.css'
-import H from "./components/illiase/_h"
-import F from "./components/illiase/_f"
-import Nav from "./components/illiase/menu"
- 
+import H from "./_components/illiase/_h"
+import F from "./_components/illiase/_f"
+import Nav from "./_components/illiase/menu"
+
+/** @type {import('next').Metadata} */
 export const metadata = {
   title: {
     template: '%s | Illiase',

@@ -146,8 +146,10 @@ main{
 
 /* main-content */
 footer, /* __FOOTER-INDEX--CONTENT__ Please CtrlF "footer{" */
-main article,
-main figure{
+#surface article,
+#works article,
+#surface figure,
+#works figure{
   display:flex; flex-direction:column;
   width:72%; max-width:500pt;
   margin:7pt auto 0;
@@ -184,7 +186,58 @@ footer p{font-size:12px}
 
 
 
-
+/* MEMBERS page */
+#mem{
+  display:flex;flex-wrap:wrap;flex-direction:row;
+  justify-content:center;
+  min-width:300px;
+  overflow:hidden;
+  padding:0 9pt;
+}
+#mem a{
+  display:flex;flex-direction:row;
+  justify-content:flex-start;
+  min-width:288px;
+  height:auto;
+  margin:9pt;padding:12pt;
+  border-radius:12pt;
+  background-color:#ccc;
+  transition:.2s transform ease,.2s box-shadow;
+}#mem a:hover{
+  transform: translate(-3pt, -3pt);
+  box-shadow: 3pt 3pt 7pt #007;
+}#mem a:active{
+  transform: translate(-2px, -1px);
+  box-shadow:1px 1px #007;
+}
+#mem img{
+  margin:0 18px 0 0;
+  border-radius:99pt;
+  background-color:linear-gradient;
+  box-shadow:0 3px 7pt #111a;
+}
+#mem article{
+  display:flex;flex-direction:column;
+  text-wrap:nowrap;
+  margin:0 9pt 0 0; justify-content:space-around;
+}
+#mem div{
+  display:flex; flex-direction:column;
+  align-items:baseline;
+}
+#mem h1{
+  margin:0;
+  font-family:var(--sans);
+  font-size:27pt;
+  font-weight:normal;
+}
+#mem h2{
+  margin:0;
+  margin-left:3pt;
+  font-family:var(--sans);
+  font-size:18px;
+  font-weight:bold;
+}
 
 
 
