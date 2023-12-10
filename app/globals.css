@@ -28,13 +28,17 @@ blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,ol,p,pre,ul{margin:0}h1,h2,h3,h4,h5
 :root {
   --serif:'Roboto','Noto Sans SC','Noto Sans JP','Noto Sans TC','Noto Sans KR', sans-serif;
   --sans:'Noto Serif','Noto Serif SC','Noto Serif JP','Noto Serif ','Noto Serif',serif;
+  /* colors */
   --illiase:#958b68;
   --illiase-trans:#958b68b3;
   --illiase-light:#e7ddb9;
-  --illiase-hover:#aef;
   --illiase-monochro:#FFE37F;
+  --illiase-hover:#aef;
+  --illiase-hover-shadow:1px 1px #0007;
+  /* lengths */
   --illiase-header-height:54px;
   --illiase-nav-width:99pt;
+  --illiase-footer-top:calc(100vh - var(--illiase-header-height));
 }
 /* reset */
 body{background-color:black}
@@ -105,7 +109,7 @@ nav .link, nav .actlink{
   color:#111;
 }
 nav .actlink{
-  background-color:var(--illiase);
+  background:var(--illiase);
   pointer-events:none;
 }
 nav h1{
@@ -129,18 +133,21 @@ nav hr{
 
 /* main */
 body{
-  display:block;width:auto;height:auto;min-height: 100vh;
-  min-width:calc(100vh - var(--illiase-nav-width));
+  display:block;width:auto;height:auto;
+  min-width:calc(100vw - var(--illiase-nav-width));
   background:url(/i/smol.png) fixed;
+  min-height: 100vh;
 }
 main{
   display:flex;flex-direction:column;
   padding:var(--illiase-header-height) 0 0 var(--illiase-nav-width);
-  min-height:calc(100vh - var(--illiase-header-height));
+  min-height:var(--illiase-footer-top);
 }
 
 /* main-content */
-main article, main figure, footer{ /* __FOOTER-INDEX--CONTENT__ Please CtrlF "footer{" */
+footer, /* __FOOTER-INDEX--CONTENT__ Please CtrlF "footer{" */
+main article,
+main figure{
   display:flex; flex-direction:column;
   width:72%; max-width:500pt;
   margin:7pt auto 0;
@@ -149,24 +156,31 @@ main article, main figure, footer{ /* __FOOTER-INDEX--CONTENT__ Please CtrlF "fo
   color:#333;
   cursor:pointer;
 }
-i{ /* inline Links */
-  text-decoration:underline;
-  transition:.2s color ease;
-}
 
 /* footer */
 footer{ /* __FOOTER-INDEX--LAST__ Please CtrlF "footer{" */
   height: 30px;
   border-radius:9pt 9pt 0 0;
-  position:sticky; top:calc(100vh - 70px);
+  position:sticky; top:var(--illiase-footer-top);
   margin-top:12pt;
   padding:12pt 18pt;
   border:0;
   background-color:#777c; color:#eee;
   cursor:auto;
   text-align:center;
+  overflow:hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis;
 }
 footer p{font-size:12px}
+#footer-link{ /* inline Links */
+  text-decoration:underline;
+  transition:.2s ease;
+  color:inherit;
+} #footer-link:hover{
+  color:var(--illiase-hover);
+  text-shadow:var(--illiase-hover-shadow);
+}
 
 
 
