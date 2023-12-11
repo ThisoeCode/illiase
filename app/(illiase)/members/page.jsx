@@ -1,13 +1,13 @@
 import Link from "next/link"
 import Image from "next/image"
-import { mongoConn } from "../../insu"
+import { insu } from "@/app/_serve/insu"
 
 export const metadata = {
   title: 'Membra',
 }
 
 export default async function Illiase() {
-  const db = await mongoConn()
+  insu()
   const mem = await db.collection('mem').find({}).toArray()
   return (
   <section id="mem">
