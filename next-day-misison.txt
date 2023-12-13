@@ -4,10 +4,9 @@ git commit -a -m "[0.1.5.2] MongoDB connection fixed"
 _______________________________
 
 Todo:
-Create a free account on mongodb official site
-
-git checkout -b private-serve
-git remote add private https://github.com/ThisoeCode/private.illiase.git
+1. Try to synchronize the public and private repo
+2. Create "illiase" collection at Atlas
+3. Use code Atlas provide and debug with "npm run dev"
 
 _______________________________
 
