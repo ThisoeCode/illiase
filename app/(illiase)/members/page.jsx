@@ -1,13 +1,23 @@
 import Link from "next/link"
 import Image from "next/image"
+import { insu } from "@/app/_serve/insu"
 
 export const metadata = {
   title: 'Membra',
 }
 
-export default async function Illiase({memData}) {
+
+const getMem = async _=>{
+  const {db}=await insu()
+  return db.collection('mem')
+    .find({}).toArray()
+}
+
+export default async function Illiase() {
+  const mems = await getMem()
+  console.log(mems)
   return (
-  <section id="mem">
+  <section id="mem" key={index}>
     <Link href='/bn' style={{background: 'linear-gradient(to right, #75ff7f, #85ffaa)'}}>
       <Image
         src="/ava/bn.png"
