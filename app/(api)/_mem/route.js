@@ -1,8 +1,8 @@
-import { insu } from "@/app/_serve/insu"
+import { dbget } from "@/app/_serve/dbget"
 
 export async function GET(){
-  const {_,db}=await insu()
-  const memData = await db.collection('mem')
-    .find({}).toArray()
-  return memData
+  const mems = JSON.parse(
+    await dbget('mem',{projection: { u: 1, displayName: 1, title:1, cardColor: 1, _id: 0 }})
+  )
+  return mems
 }
