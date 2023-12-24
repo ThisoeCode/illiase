@@ -51,7 +51,7 @@ body{background-color:black}
   font-style: normal;
   font-family:var(--serif);
 }
-Image, img{user-select:none}
+img{user-select:none}
 *::selection{
   background:var(--illiase-trans);
   color:#007;
@@ -184,6 +184,29 @@ footer p{font-size:12px}
   text-shadow:var(--illiase-hover-shadow);
 }
 
+#nf404{
+  display:flex;flex-direction: column;
+  gap:9pt;
+  margin:auto;
+}
+#nf404 h1,#nf404  p{
+  font-size:18px;
+  margin:auto;
+  color:white;
+  text-shadow:var(--illiase-hover-shadow);
+}#nf404 h1{font-size:39pt;line-height:1;}
+#nf404 a{
+  margin-top:18pt;
+  padding:7pt 27pt;
+  color:#fff;
+  border:var(--illiase) solid 2px;
+  border-radius:7pt;
+  transition:.2s ease;
+}#nf404 a:hover{
+  border-color:transparent;
+  background-color:#eee;
+  color:#111;
+}
 
 
 /* MEMBERS page */
@@ -195,6 +218,7 @@ footer p{font-size:12px}
   padding:0 9pt;
 }
 #mem a{
+  color:#007;
   display:flex;flex-direction:row;
   justify-content:flex-start;
   min-width:288px;
