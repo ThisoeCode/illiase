@@ -265,6 +265,11 @@ footer p{font-size:12px}
 
 
 
+/* AUTH - login page */
+#login{
+  display:flex;
+}
+
 
 
 
