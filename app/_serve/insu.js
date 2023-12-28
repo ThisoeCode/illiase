@@ -1,14 +1,8 @@
 const { MongoClient, ServerApiVersion } = require('mongodb')
-const { DB_PWD, DB_NAME } = process.env
-const uri = `mongodb+srv://thisoecode:${encodeURIComponent(DB_PWD)}@cluster0.y0xpe1z.mongodb.net/?retryWrites=true&w=majority`
+const { DB_URI } = process.env
+const options = {serverApi:{version:ServerApiVersion.v1,strict:true,deprecationErrors:true}}
 
-const con = new MongoClient(uri, {
-  serverApi: {
-    version: ServerApiVersion.v1,
-    strict: true,
-    deprecationErrors: true,
-  }
-})
+const con = new MongoClient(DB_URI, options)
 
 // Create client (from Atlas tips)
 export const client = con
@@ -20,18 +14,12 @@ export async function insu() {
   if (cachedClient && cachedDb) {
     return { client: cachedClient, db: cachedDb }
   }
-  try {
-    await con.connect()
-    const db = con.db(DB_NAME)
-    cachedClient = con
-    cachedDb = db
-    return { client, db }
-  } catch (error) {
-    console.error('[Illiase] DB conn error: ', error)
-    throw new Error('CDB connection error')
-  }
+  await con.connect()
+  const db = con.db(DB_NAME)
+  cachedClient = con
+  cachedDb = db
+  return { client, db }
 }
-
 
 /*
   async function run() {
@@ -46,3 +34,9 @@ export async function insu() {
   }
   run().catch(console.dir)
 */
+
+
+// @auth/mongodb-adapter connection requirement (code from https://authjs.dev/reference/adapter/mongodb )
+let clientPromise
+clientPromise = client.connect()
+export default clientPromise

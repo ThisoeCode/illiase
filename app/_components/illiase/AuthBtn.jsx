@@ -4,12 +4,12 @@ import { signIn, signOut, getProviders, useSession } from "next-auth/react"
 
 const btn = (i) => {
   const list = {
-    login: ["Login","Salve"],
-    logout: ["Logout","Vale"],
-    post: ["Post","Scribo"],
+    login: ["Login","Salve",'login'],
+    logout: ["Logout","Vale",'logout'],
+    post: ["Post","Scribo",'post'],
   }
   return (
-    <Link className={usePathname() === "/post"?"actlink":"link"} href={`/${i}`}>
+    <Link className={usePathname() === `/${list[i][2]}`?"actlink":"link"} href={`/${i}`}>
       <h1>{list[i][0]}</h1>
       <p>{list[i][1]}</p>
     </Link>
@@ -17,10 +17,10 @@ const btn = (i) => {
 }
 
 export default function AuthBtn() {
-  const {data:session} = useSession()
+  // const {data:session} = useSession()
 
-  if (/*session*/) {
-    if (/*!session.user.email===listOfMembersGmails*/) {
+  if (/*session*/0) {
+    if (/*!session.user.email===listOfMembersGmails*/0) {
       return btn("logout")
     }
     return btn("post")

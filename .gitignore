@@ -1,6 +1,6 @@
 ### ILLIASE ignores config
 *.txt
-
+temp/
 
 
 ### NEXT.JS ignores config
