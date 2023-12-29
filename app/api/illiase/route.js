@@ -1,4 +1,7 @@
+import { NextResponse } from "next/server";
+
 export async function GET(req){
-  
-  return []
+  return NextResponse.json({
+    ping: true,
+  })
 }

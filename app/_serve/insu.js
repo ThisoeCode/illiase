@@ -18,7 +18,7 @@ export async function insu() {
   const db = con.db(DB_NAME)
   cachedClient = con
   cachedDb = db
-  return { client, db }
+  return { client: cachedClient, db: cachedDb }
 }
 
 /*
@@ -38,5 +38,6 @@ export async function insu() {
 
 // @auth/mongodb-adapter connection requirement (from https://authjs.dev/reference/adapter/mongodb tips)
 let clientPromise
-clientPromise = client.connect()
+const adapterClient = new MongoClient(DB_URI, options)
+clientPromise = adapterClient.connect()
 export default clientPromise
