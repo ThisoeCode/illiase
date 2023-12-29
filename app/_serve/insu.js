@@ -1,5 +1,5 @@
 const { MongoClient, ServerApiVersion } = require('mongodb')
-const { DB_URI } = process.env
+const { DB_URI, DB_NAME } = process.env
 const options = {serverApi:{version:ServerApiVersion.v1,strict:true,deprecationErrors:true}}
 
 const con = new MongoClient(DB_URI, options)
@@ -36,7 +36,7 @@ export async function insu() {
 */
 
 
-// @auth/mongodb-adapter connection requirement (code from https://authjs.dev/reference/adapter/mongodb )
+// @auth/mongodb-adapter connection requirement (from https://authjs.dev/reference/adapter/mongodb tips)
 let clientPromise
 clientPromise = client.connect()
 export default clientPromise

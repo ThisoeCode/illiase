@@ -267,8 +267,30 @@ footer p{font-size:12px}
 
 /* AUTH - login page */
 #login{
-  display:flex;
+  margin:39px auto auto;
+  display:flex;flex-direction:column;
+  line-height:3;
+  gap:9pt;
 }
+#login h1{
+  margin:auto;
+  color:#ccc;
+  text-shadow:2pt 2pt #000;
+  font-size:39pt;
+  font-family:var(--sans);
+}
+#login .provider-icon{
+  margin:auto;
+  padding:7pt;
+  width: 39pt; height: 39pt;
+  border-radius:99pt;
+  transition:.2s ease;
+  cursor:pointer;
+}
+#login .provider-icon:hover{background-color:#fff}
+#login .provider-icon path{transition:fill .2s ease;}
+#google-ico:hover path#b{fill:#4285F4}#google-ico:hover path#g{fill:#34A853}#google-ico:hover path#y{fill:#FBBC05}#google-ico:hover path#r{fill:#EA4335}
+#login svg{width:100%;height:100%;fill:var(--illiase)}
 
 
 
