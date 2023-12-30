@@ -1,6 +1,6 @@
 import { usePathname } from "next/navigation"
 import Link from "next/link"
-import { signIn, signOut, getProviders, useSession } from "next-auth/react"
+// import {useSession} from "next-auth/react"
 
 export default function AuthBtn() {
   const btn = (i, path) => {
@@ -16,7 +16,7 @@ export default function AuthBtn() {
       </Link>
     )
   }
-
+  
   // const {data:session} = useSession()
   const currentPath = usePathname()
 
