@@ -9,9 +9,9 @@ const providers = [
     clientSecret: process.env.OAUTH_GOOGLE_CLIENT_ID??'',
   })
 ]
-export const authConfig = providers
+export const authConfig = {providers}
 
 export default NextAuth({
-  adapter: MongoDBAdapter(clientPromise),
-  providers
+  providers,
+  adapter: MongoDBAdapter(clientPromise)
 })
