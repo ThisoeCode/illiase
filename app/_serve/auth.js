@@ -1,17 +1,24 @@
 import GoogleProvider from "next-auth/providers/google"
+import GitHubProvider from "next-auth/providers/github"
 import clientPromise from "./insu"
-import NextAuth from "next-auth/next"
 import { MongoDBAdapter } from "@auth/mongodb-adapter"
+const {OAUTH_DB_NAME,OAUTH_GOOGLE_CLIENT_ID:googleId,OAUTH_GOOGLE_CLIENT_SC:googleSc,OAUTH_GITHUB_ID:ghId,OAUTH_GITHUB_SC:ghSc} = process.env
 
 const providers = [
   GoogleProvider({
-    clientId: process.env.OAUTH_GOOGLE_CLIENT_ID??'',
-    clientSecret: process.env.OAUTH_GOOGLE_CLIENT_ID??'',
+    clientId: googleId,
+    clientSecret: googleSc,
+  }),
+  GitHubProvider({
+    clientId: ghId,
+    clientSecret: ghSc,
   })
-]
-export const authConfig = {providers}
 
-export default NextAuth({
+]
+
+const adapter = MongoDBAdapter(clientPromise,{databaseName:OAUTH_DB_NAME})
+
+export const authConfig = {
   providers,
-  adapter: MongoDBAdapter(clientPromise)
-})
+  adapter,
+}

@@ -272,12 +272,16 @@ footer p{font-size:12px}
   line-height:3;
   gap:9pt;
 }
-#login h1{
-  margin:auto;
+#login h1,#login p{
+  margin:auto; text-align:center;
   color:#ccc;
   text-shadow:2pt 2pt #000;
   font-size:39pt;
   font-family:var(--sans);
+}#login p{font-size:16pt;line-height:1;text-shadow:none}
+#login section{
+  display:flex;flex-direction:row;
+  gap:9pt;
 }
 #login .provider-icon{
   margin:auto;
@@ -289,8 +293,10 @@ footer p{font-size:12px}
 }
 #login .provider-icon:hover{background-color:#fff}
 #login .provider-icon path{transition:fill .2s ease;}
-#google-ico:hover path#b{fill:#4285F4}#google-ico:hover path#g{fill:#34A853}#google-ico:hover path#y{fill:#FBBC05}#google-ico:hover path#r{fill:#EA4335}
-#login svg{width:100%;height:100%;fill:var(--illiase)}
+#login .provider-icon svg{width:100%;height:100%;fill:var(--illiase)}
+#login #google-ico:hover path#b{fill:#4285F4}#login #google-ico:hover path#g{fill:#34A853}#login #google-ico:hover path#y{fill:#FBBC05}#login #google-ico:hover path#r{fill:#EA4335}
+#login #github-ico:hover{background-color:#fff}
+#login #github-ico:hover path{fill:#1B1F23}
 
 
 
