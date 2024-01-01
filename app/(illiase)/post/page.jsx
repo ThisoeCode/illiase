@@ -2,7 +2,7 @@ export const metadata = {
   title: 'Post',
 }
 
-export default function Illiase() {
+export default function IlliasePost() {
   return (
   <></>
   )

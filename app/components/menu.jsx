@@ -1,7 +1,7 @@
 'use client'
 import Link from 'next/link'
-import { usePathname  } from 'next/navigation'
-import AuthBtn from './AuthBtn.jsx'
+import {usePathname} from 'next/navigation'
+import AuthLink from './AuthLink.jsx'
 
 export default function Illiase() {
   return (
@@ -15,7 +15,7 @@ export default function Illiase() {
     <Link className={usePathname()==='/works'?'actlink':'link'} href='/works'>
       <h1>Our Works</h1><p>Opera Nostra</p>
     </Link><hr />
-    <AuthBtn /><hr />
+    <AuthLink/><hr />
     <Link className={usePathname()==='/cnct'?'actlink':'link'} href='/cnct'>
       <h1>Contact Us</h1><p>Contactus Nos</p>
     </Link>

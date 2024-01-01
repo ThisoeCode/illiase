@@ -3,7 +3,7 @@ export const metadata = {
   title: 'Contactus Nos',
 }
 
-export default function Illiase() {
+export default function IlliaseCnct() {
   return (
   <></>
   )

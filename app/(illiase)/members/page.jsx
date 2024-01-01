@@ -8,7 +8,7 @@ export const metadata = {
 }
 
 
-export default async function Illiase() {
+export default async function IlliaseMembers() {
   const mems = JSON.parse(
     await dbget('mem',{projection: { u: 1, displayName: 1, title:1, cardColor: 1, _id: 0 }})
   )

@@ -3,7 +3,7 @@ export const metadata = {
   title: '',/* SESSION.USERNAME !!!!!!!!!!!!!*/
 }
 
-export default function Illiase() {
+export default function IlliaseHome() {
   return (
   <></>
   )

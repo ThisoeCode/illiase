@@ -1,10 +1,10 @@
-import GotoAuth from "@/app/_components/illiase/AuthGotoProvider"
+import GotoAuth from "@/app/components/AuthGotoProvider"
 
 export const metadata = {
   title: 'Login',
 }
 
-export default function Illiase() {
+export default function IlliaseLogin() {
   return (
   <section id="login">
     <h1>LOGIN</h1>
