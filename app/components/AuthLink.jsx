@@ -16,19 +16,20 @@ import Link from "next/link"
 // import {session} from "../_serve/auth"
 // const user = (await session()).user
 
-export default function AuthLink() {
+export default function AuthLink(hr) {
   const btn = (i, path) => {
     const list = {
       login: ["Login","Salve",'login'],
       home: ["Profile","Mihi",'home'],
       post: ["Post","Scribo",'post'],
     }
-    return (
+    return (<>
       <Link className={path === `/${list[i][2]}`?"actlink":"link"} href={`/${i}`}>
         <h1>{list[i][0]}</h1>
         <p>{list[i][1]}</p>
       </Link>
-    )
+      {hr?<hr/>:null}
+    </>)
   }
 
   // const {data:session} = useSession() ?????????????????????
