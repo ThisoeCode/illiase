@@ -1,7 +1,7 @@
 import './globals.css'
 import H from "./components/_h"
 import F from "./components/_f"
-import Nav from "./components/menu"
+import Nav from './components/menu'
 
 /** @type {import('next').Metadata} */
 export const metadata = {

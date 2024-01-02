@@ -124,7 +124,6 @@ nav p{
   font-family: 'Noto Serif',serif;
   padding-bottom:3px;
 }nav .actlink p{color:#eed}
-nav .actlink:hover p{color:var(--illiase)}
 nav hr{
   margin:0 auto;
   width:54%;height:0;

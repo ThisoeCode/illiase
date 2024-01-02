@@ -1,8 +1,7 @@
-'use client'
 import MenuLink from './menuLink.jsx'
 import AuthLink from './AuthLink.jsx'
 
-export default function Illiase() {
+export default async function IlliaseClientNav() {
   return (
     <nav>
     <MenuLink path="/" h1="Surface" p="Index" hr/>
