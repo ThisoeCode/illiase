@@ -1,4 +1,4 @@
-import GotoAuth from "@/app/components/AuthGotoProvider"
+import GotoAuth from "@/components/AuthGotoProvider"
 
 export const metadata = {
   title: 'Login',

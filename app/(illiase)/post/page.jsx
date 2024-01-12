@@ -1,4 +1,4 @@
-import LogoutBtn from "@/app/components/logout"
+import LogoutBtn from "@/components/logout"
 import { signOut } from "next-auth/react"
 
 export const metadata = {

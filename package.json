@@ -12,7 +12,7 @@
     "@auth/mongodb-adapter": "^2.0.10",
     "mongodb": "^6.3.0",
     "next": "14.0.3",
-    "next-auth": "^4.24.5",
+    "next-auth": "^5.0.0-beta.4",
     "react": "^18",
     "react-dom": "^18"
   },
