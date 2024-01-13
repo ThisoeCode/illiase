@@ -1,4 +1,4 @@
-import GotoAuth from "@/components/AuthGotoProvider"
+import SigninProviders from "@/components/AuthGotoProvider"
 
 export const metadata = {
   title: 'Login',
@@ -9,7 +9,7 @@ export default function IlliaseLogin() {
   <section id="login">
     <h1>LOGIN</h1>
     <p>with...</p>
-    <GotoAuth />
+    <SigninProviders/>
   </section>
   )
 }
