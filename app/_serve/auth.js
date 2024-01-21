@@ -5,6 +5,7 @@ import { MongoDBAdapter } from "@auth/mongodb-adapter"
 const {OAUTH_DB_NAME,OAUTH_GOOGLE_CLIENT_ID:googleId,OAUTH_GOOGLE_CLIENT_SC:googleSc,OAUTH_GITHUB_ID:ghId,OAUTH_GITHUB_SC:ghSc} = process.env
 
 
+// CONFIG
 /** @type {import("next-auth").NextAuthConfig} */
 export const authConfig = {
 
@@ -30,12 +31,7 @@ export const authConfig = {
   },
 }
 
-// next-auth@4 features
-  // import {getServerSession} from "next-auth"
-  // export async function session() {
-  //   return await getServerSession(authConfig)
-  // }
 
-// next-auth@beta (^5.0.0) features
+// AUTH
   import NextAuth from "next-auth"
   export const { handlers, auth, signIn, signOut } = NextAuth(authConfig)

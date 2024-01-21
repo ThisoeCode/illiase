@@ -1,7 +1,7 @@
 import Link from 'next/link'
  
 export default function NotFound() {
-  console.error('[Illiase: 404]')
+  console.error('[Illiase: NotFound]')
   return (
     <div id='nf404'>
       <h1>404</h1>

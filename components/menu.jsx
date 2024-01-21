@@ -8,7 +8,7 @@ export default async function IlliaseClientNav() {
     <MenuLink path="/members" h1="Members" p="Membra" hr/>
     <MenuLink path="/works" h1="Our Works" p="Opera Nostra" hr/>
     <AuthLink hr/>
-    <MenuLink path="/cnct" h1="Contactus Nos" p="Index"/>
+    <MenuLink path="/cnct" h1="Contact Us" p="Contactus Nos"/>
   </nav>
   )
 }
