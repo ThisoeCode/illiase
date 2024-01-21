@@ -1,9 +1,18 @@
 NextdayMission:
   ☐ try carroll's account
+  ☐ Redirects of `/post`, `/home` ...
+    ☐ Consider all situations:
+      1: @ismem
+      2: @non-member
+      3: @not-logged-in
   ☐ MongoDB NextJS tut
+  @critical bug:
+    ☐ Profile `/home` page title show username, but `null` in DOM
+
 
 Version:
   @[0.1.8.16]
+
 
 CheatSheet:
   ☐ New todo `Ctrl + Enter`
