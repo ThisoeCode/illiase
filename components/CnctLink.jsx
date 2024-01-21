@@ -3,12 +3,12 @@ import {auth} from "@/app/_serve/auth"
 import {SessionProvider} from "next-auth/react"
 const memEmails = process.env.MEM_EMAIL.split(',')
 
-export default async function AuthLink({hr}) {
+export default async function CnctLink({hr}) {
   const linkPath = (i) => {
     const h1_p = {
-      login: ["Login","Salve"],
+      cnct: ["Contact Us","Contactus Nos"],
       home: ["Profile","Mihi"],
-      post: ["Post","Scribo"],
+      about: ["About Us","De Nobis"],
     }
     return <SessionProvider session={session}>
       <MenuLink
@@ -22,9 +22,9 @@ export default async function AuthLink({hr}) {
   const session = await auth()
   if (session&&session.user) {
     if (memEmails.includes(session.user.email)) {
-      return linkPath("post")
+      return linkPath("home")
     }
-    return linkPath("home")
+    return linkPath("cnct")
   }
-  return linkPath("login")
+  return linkPath("about")
 }

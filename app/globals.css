@@ -176,11 +176,11 @@ footer{ /* __FOOTER-INDEX--LAST__ Please CtrlF "footer{" */
   text-overflow:ellipsis;
 }
 footer p{font-size:12px}
-#footer-link{ /* inline Links */
+.footer-link{ /* inline Links */
   text-decoration:underline;
   transition:.2s ease;
   color:inherit;
-} #footer-link:hover{
+} .footer-link:hover{
   color:var(--illiase-hover);
   text-shadow:var(--illiase-hover-shadow);
 }

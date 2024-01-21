@@ -4,7 +4,7 @@ import {LogoutButton} from "@/components/auth-components"
 import IlliaseSession from "@/components/TEST-Session"
 
 export const metadata = {
-  title: 'Contact Illiase',
+  title: 'Contact',
 }
 
 export default async function IlliaseCnct(){

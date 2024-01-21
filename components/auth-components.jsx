@@ -7,13 +7,13 @@ import {ReactNode,ReactElement} from "react"
  * @param {ReactNode} o.children
  * @returns {ReactElement}
  */
-export function LoginButton({provider,children,...props}){
+export function LoginButton({provider,disable,children,...props}){
   return (
-    <form action={async _=>{
+    <form style={disable?{display:"none"}:null} action={async _=>{
       "use server"
       await signIn(provider)
     }}>
-      <button type="submit" id={provider+'-ico'} {...props}>
+      <button disabled={!!disable} type="submit" id={provider+'-ico'} {...props}>
         {children}
       </button>
     </form>
