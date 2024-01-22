@@ -33,5 +33,29 @@ export const authConfig = {
 
 
 // AUTH
-  import NextAuth from "next-auth"
-  export const { handlers, auth, signIn, signOut } = NextAuth(authConfig)
+import NextAuth from "next-auth"
+export const { handlers, auth, signIn, signOut } = NextAuth(authConfig)
+
+
+// ISMEM
+/**
+ * @param {Function} isMem - When is a mem, callback
+ * @param {Function} notMem - When is not a mem, callback
+ * @param {Function} notAuth - When is not logged in, callback
+ * @returns {true|false|null}
+ */
+export async function isIlliaseMem(
+  isMem =_=> {return true},
+  notMem =_=> {return false},
+  notAuth =_=> {return null},
+){
+  const memEmails = process.env.MEM_EMAIL.split(',')
+  const session = await auth()
+  if (session&&session.user) {
+    if (memEmails.includes(session.user.email)) {
+      return isMem()
+    }
+    return notMem()
+  }
+  return notAuth()
+}

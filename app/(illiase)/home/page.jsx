@@ -1,21 +1,24 @@
 import {auth} from "@/app/_serve/auth"
 import {redirect} from "next/navigation"
 
-let u = null
-export async function generateMetadata(){
+const u = async _=>{
   const session = await auth()
   if(session&&session.user){
-    u = session.user.email.slice(0, session.user.email.indexOf("@"))
     /**
      * @todo Get `UserName` from db using `session`
      * @todo import dbget
      */
-  }else redirect('/login?home')
-  return {title:u}
+    return session.user.email.slice(0, session.user.email.indexOf("@"))
+  } else redirect('/login?home')
 }
 
-export default function IlliaseHome() {
+export async function generateMetadata(){
+  const uname = await u()
+  return {title:uname}
+}
+
+export default async function IlliaseHome() {
   return (
-  <>{u+`'s info...`}</>
+  <>{await u()+`'s info...`}</>
   )
 }
