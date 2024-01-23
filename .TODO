@@ -1,13 +1,11 @@
 NextdayMission:
-  Bugs:@critical
-    ✔ Profile `/home` page title show username, but `null` in DOM @done(24-01-22 22:05)
   Todo:
+    ☐ Learn how to make `pass down through props from a Server Component`
+    
+    ☐ Loading after `Login with Google` clicked
     ☐ try carroll's account
-    ☐ Redirects of `/post`, `/home` ...
-      ☐ Consider all situations:
-        1: @ismem
-        2: @non-member
-        3: @not-logged-in
+    ☐ Redirects of `/post`, `/home`... @USING `await isIlliaseMem()`
+      ✔ Consider all 3 situations
     ☐ MongoDB NextJS tut
 
 

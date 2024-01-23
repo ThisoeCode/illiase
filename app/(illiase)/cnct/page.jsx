@@ -1,6 +1,6 @@
 import {auth} from "../../_serve/auth"
 import {SessionProvider} from "next-auth/react"
-import {LogoutButton} from "@/components/auth-components"
+import {LogoutButton} from "@/components/auth-logoutBtn"
 import IlliaseSession from "@/components/TEST-Session"
 
 export const metadata = {
