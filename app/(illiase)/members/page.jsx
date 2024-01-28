@@ -37,13 +37,16 @@ export default async function IlliaseMembers() {
           alt={data.displayName+"'s avatar"} />
         <article>
           <div>
-            <h1>{data.displayName}</h1>
-            <h2>#{data.title}</h2>
+            <h2>{data.displayName}</h2>
+            <h3>#{data.title}</h3>
           </div>
         </article>
       </Link>
     )
   }))
 
-  return <section id="mem">{imageElements}</section>
+  return <section id="mem">
+    <h1 id="headtitle">Members</h1>
+    {imageElements}
+    </section>
 }

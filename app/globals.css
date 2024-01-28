@@ -30,6 +30,7 @@ blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,ol,p,pre,ul{margin:0}h1,h2,h3,h4,h5
   --sans:'Noto Serif','Noto Serif SC','Noto Serif JP','Noto Serif ','Noto Serif',serif;
   /* colors */
   --illiase:#958b68;
+  --illiase-dark:#775;
   --illiase-trans:#958b68b3;
   --illiase-light:#e7ddb9;
   --illiase-monochro:#FFE37F;
@@ -40,6 +41,7 @@ blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,ol,p,pre,ul{margin:0}h1,h2,h3,h4,h5
   --illiase-nav-width:99pt;
   --illiase-footer-top:calc(100vh - var(--illiase-header-height));
 }
+
 /* reset */
 body{background-color:black}
 *{
@@ -52,16 +54,15 @@ body{background-color:black}
   font-family:var(--serif);
 }
 img{user-select:none}
+form,button{all:unset}
+
+/* general */
+/* selecting */
 *::selection{
   background:var(--illiase-trans);
   color:#007;
   text-shadow: 1px 1px var(--illiase-light);
 }
-form,button
-{all:unset}
-/* @media (prefers-color-scheme: dark) {
-  body {background-color:white}
-} */
 
 
 
@@ -209,8 +210,19 @@ footer p{font-size:12px}
   color:#111;
 }
 
+/* scrollbar */
+::-webkit-scrollbar{width:8pt}
+::-webkit-scrollbar-track{background-color:#222}
+::-webkit-scrollbar-thumb{
+  background-color:var(--illiase-dark);
+  border-radius:9pt;
+  transition:.2s background-color ease;
+}
+::-webkit-scrollbar-thumb:hover{background-color:var(--illiase)}
 
-/* MEMBERS page */
+
+
+/*** MEMBERS ***/
 #mem{
   display:flex;flex-wrap:wrap;flex-direction:row;
   justify-content:center;
@@ -235,7 +247,7 @@ footer p{font-size:12px}
   transform: translate(-2px, -1px);
   box-shadow:1px 1px #007;
 }
-#mem img{
+#mem img, #mem-skeleton-img{
   margin:0 18px 0 0;
   border-radius:99pt;
   background-color:linear-gradient;
@@ -250,13 +262,13 @@ footer p{font-size:12px}
   display:flex; flex-direction:column;
   align-items:baseline;
 }
-#mem h1{
+#mem h2{
   margin:0;
   font-family:var(--sans);
   font-size:27pt;
   font-weight:normal;
 }
-#mem h2{
+#mem h3{
   margin:0;
   margin-left:3pt;
   font-family:var(--sans);
@@ -266,7 +278,7 @@ footer p{font-size:12px}
 
 
 
-/* AUTH - login page */
+/*** LOGIN ***/
 #login{
   margin:39px auto auto;
   display:flex;flex-direction:column;
@@ -304,7 +316,8 @@ footer p{font-size:12px}
 
 
 
-/*** LOADING ***/
+/*** [Pin to bottom] ***/
+/* loading */
 i#loading{
   display:flex;flex-direction:column;
   background-color:#7777;
@@ -312,6 +325,19 @@ i#loading{
 }i#loading i{
   width:300pt; height: 200pt;
   background-color:#ccc;
+}
+#mem-skeleton-img{
+  height:144px;width:144px;
+  box-shadow:none;
+  background-color:#958b6770;
+}
+/* general */
+#headtitle{
+  margin:1vh auto auto; text-align:center;
+  color:#ccc;
+  text-shadow:2pt 2pt #000;
+  font-size:30pt;
+  font-family:var(--sans);
 }
 
 
