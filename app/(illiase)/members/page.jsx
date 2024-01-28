@@ -45,8 +45,9 @@ export default async function IlliaseMembers() {
     )
   }))
 
-  return <section id="mem">
-    <h1 id="headtitle">Members</h1>
-    {imageElements}
+  return <div id="titlewrap"><h1 id="headtitle">Members</h1>
+    <section id="mem">
+      {imageElements}
     </section>
+  </div>
 }

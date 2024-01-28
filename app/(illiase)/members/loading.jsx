@@ -16,8 +16,10 @@ export default function memSkeleton(){
     return i
   })()
 
-  return <section id="mem">
+  return <div id="titlewrap">
     <h1 id="headtitle">Members</h1>
-    {imageElements}
-  </section>
+    <section id="mem">
+      {imageElements}
+    </section>
+  </div>
 }

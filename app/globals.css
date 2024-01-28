@@ -332,8 +332,14 @@ i#loading{
   background-color:#958b6770;
 }
 /* general */
+#titlewrap{
+  display:flex;flex-direction:column;
+  width:auto;height:auto;
+  margin:auto;
+  gap:7pt
+}
 #headtitle{
-  margin:1vh auto auto; text-align:center;
+  margin:9pt auto auto; text-align:center;
   color:#ccc;
   text-shadow:2pt 2pt #000;
   font-size:30pt;
