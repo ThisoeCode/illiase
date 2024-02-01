@@ -1,14 +1,17 @@
 NextdayMission:
   Todo:
-    ✔ Learn how to make `pass down through props from a Server Component` @done(24-01-23 22:13)
-
-    ☐ Loading after `Login with Google` clicked
+    ✔ Fix `/members` avatar (just use full filename) @done(24-02-01 22:15)
     ☐ Redirects of `/post`, `/home`... @USING `await isIlliaseMem()`
       ✔ Consider all 3 situations
+    ☐ Loading after `Login with Google` clicked
+
     ☐ MongoDB NextJS tut
+    AWS:
+    ☐ Learn and make a S3 bucket on AWS
+    ☐ Store member avatars on S3 
 
 Version:
-  @[0.1.8.16]
+  @[0.1.8.19-hotupdate] 
 
 DoLater:
   ☐ Page top loading bar https://medium.com/@garadiya0/how-to-add-a-top-loading-bar-in-next-js-ed56a13c78d

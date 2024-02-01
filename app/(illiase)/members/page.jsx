@@ -10,20 +10,11 @@ export const metadata = {
 
 export default async function IlliaseMembers() {
   const mems = JSON.parse(
-    await dbget('mem',{projection: { u: 1, displayName: 1, title:1, cardColor: 1, _id: 0 }})
+    await dbget('mem',{projection: { u: 1, displayName: 1, title:1, cardColor: 1, ava: 1, _id: 0 }})
   )
 
   const avasrc = async (data) => {
-    const path = `/ava/${data.u}.`
-    const supportFormat = ['png','jpg','jpeg']
-    for (const format of supportFormat) {
-      const imagePath = path + format
-      try {
-        await fs.access(`public${imagePath}`, fs.constants.F_OK)
-        return imagePath
-      } catch(error){undefined}
-    }
-    return '/i/con2.png'
+    return `/ava/`+data.ava
   }
 
   const imageElements = await Promise.all(mems.map(async (data, index) => {
