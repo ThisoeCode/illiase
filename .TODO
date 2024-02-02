@@ -1,9 +1,13 @@
 NextdayMission:
   Todo:
-    ✔ Redirects of `/post`, `/home`... @USING `await isIlliaseMem()` @done(24-02-02 15:24)
-      ✔ Consider all 3 situations
-      ☐ Accepts from redirecting (see JSDoc todos)
-    ✔ Loading after `Login with Google` clicked @done(24-02-02 17:10)
+    ☐ Make decision of posts structure & workflow
+      1. Post system:
+        ☐ Client `/post`
+      2. Surface:
+
+      3. Works:
+
+
 
     ☐ MongoDB NextJS tut
     AWS:

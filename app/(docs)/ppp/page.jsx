@@ -2,7 +2,7 @@
 export default function IlliasePPP(){
   return (<>
     <i id="loading">
-      <i>Privacy Policy</i>
+      <i>Public Privacy Policy</i>
       <i/><i/><i/><i/>
     </i>
   </>)

@@ -307,9 +307,9 @@ footer p{font-size:12px}
 #login .provider-icon:hover{background-color:#fff}
 #login .provider-icon path{transition:fill .2s ease;}
 #login .provider-icon svg{width:100%;height:100%;fill:var(--illiase)}
-#login #google-ico:hover path#b{fill:#4285F4}#login #google-ico:hover path#g{fill:#34A853}#login #google-ico:hover path#y{fill:#FBBC05}#login #google-ico:hover path#r{fill:#EA4335}
-#login #github-ico:hover{background-color:#fff}
-#login #github-ico:hover path{fill:#1B1F23}
+#login #Google-ico:hover path#b{fill:#4285F4}#login #Google-ico:hover path#g{fill:#34A853}#login #Google-ico:hover path#y{fill:#FBBC05}#login #Google-ico:hover path#r{fill:#EA4335}
+#login #GitHub-ico:hover{background-color:#fff}
+#login #GitHub-ico:hover path{fill:#1B1F23}
 
 
 

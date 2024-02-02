@@ -9,11 +9,11 @@ export default function ProviderSignInListBtns({login}){
     <p style={isLoggingIn?{display:"none"}:null}>with...</p>
     <section>
   {isLoggingIn?
-  (<>
-    {/** @todo CSS */}
+  (<> {/** @todo CSS? */}
     <i style={{color:"wheat"}}>Logging in...</i>
   </>):(<>
     <LoginButton
+      // disable
       provider="Google"
       onClick={_=>{
         setIsLoggingIn(true)
@@ -23,12 +23,12 @@ export default function ProviderSignInListBtns({login}){
       <GoogleIcon/>
     </LoginButton>
     <LoginButton
+      // disable
       provider="GitHub"
       onClick={_=>{
         setIsLoggingIn(true)
         login('github')
       }}
-      disable
     >
       <GithubIcon/>
     </LoginButton>
