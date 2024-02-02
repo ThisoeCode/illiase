@@ -1,10 +1,9 @@
 NextdayMission:
   Todo:
-    ✔ Fix `/members` avatar (just use full filename) @done(24-02-01 22:15)
-    ☐ Redirects of `/post`, `/home`... @USING `await isIlliaseMem()`
+    ✔ Redirects of `/post`, `/home`... @USING `await isIlliaseMem()` @done(24-02-02 15:24)
       ✔ Consider all 3 situations
       ☐ Accepts from redirecting (see JSDoc todos)
-    ☐ Loading after `Login with Google` clicked
+    ✔ Loading after `Login with Google` clicked @done(24-02-02 17:10)
 
     ☐ MongoDB NextJS tut
     AWS:
@@ -12,7 +11,7 @@ NextdayMission:
     ☐ Store member avatars on S3 
 
 Version:
-  @[0.1.8.19-hotupdate] 
+  @[0.1.8.21] 
 
 DoLater:
   ☐ Page top loading bar https://medium.com/@garadiya0/how-to-add-a-top-loading-bar-in-next-js-ed56a13c78d

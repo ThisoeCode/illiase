@@ -18,7 +18,6 @@ export default async function IlliaseLogin() {
   return (
   <section id="login">
     <h1>LOGIN</h1>
-    <p>with...</p>
     <ProviderSignInListBtns login={login}/>
   </section>
   )

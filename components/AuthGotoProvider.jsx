@@ -4,27 +4,35 @@ import { LoginButton } from "./auth-loginAction"
 import {GoogleIcon,GithubIcon} from "./SVGs"
 
 export default function ProviderSignInListBtns({login}){
-  const [isLoggingIn,loginLoading] = useState(false)
-  return (
-  <section style={isLoggingIn?{display:"none"}:null}>
+  const [isLoggingIn,setIsLoggingIn] = useState(false)
+  return <>
+    <p style={isLoggingIn?{display:"none"}:null}>with...</p>
+    <section>
+  {isLoggingIn?
+  (<>
+    {/** @todo CSS */}
+    <i style={{color:"wheat"}}>Logging in...</i>
+  </>):(<>
     <LoginButton
-      login={login}
-      provider="google"
-      className="provider-icon"
-      title='Login with Google'
-      onClick={_=>{loginLoading(false)}}
+      provider="Google"
+      onClick={_=>{
+        setIsLoggingIn(true)
+        login('google')
+      }}
     >
       <GoogleIcon/>
     </LoginButton>
     <LoginButton
-      login={login}
-      provider="github"
-      className="provider-icon"
-      title='Login with GitHub'
-      onClick={_=>{loginLoading(false)}}
+      provider="GitHub"
+      onClick={_=>{
+        setIsLoggingIn(true)
+        login('github')
+      }}
       disable
     >
       <GithubIcon/>
     </LoginButton>
-  </section>)
+  </>)
+  }
+  </section> </>
 }
