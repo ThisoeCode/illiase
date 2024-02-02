@@ -3,6 +3,7 @@ NextdayMission:
     ✔ Fix `/members` avatar (just use full filename) @done(24-02-01 22:15)
     ☐ Redirects of `/post`, `/home`... @USING `await isIlliaseMem()`
       ✔ Consider all 3 situations
+      ☐ Accepts from redirecting (see JSDoc todos)
     ☐ Loading after `Login with Google` clicked
 
     ☐ MongoDB NextJS tut

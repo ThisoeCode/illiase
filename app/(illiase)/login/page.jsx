@@ -14,6 +14,7 @@ export default async function IlliaseLogin() {
     await signIn(provider)
   }
   if(session) return redirect('/','push')
+
   return (
   <section id="login">
     <h1>LOGIN</h1>

@@ -9,7 +9,7 @@ const u = async _=>{
      * @todo import dbget
      */
     return session.user.email.slice(0, session.user.email.indexOf("@"))
-  } else redirect('/login?home')
+  } else redirect('/login?home') /** @todo REDIRECT TO BE ACCEPTED: `?home` */
 }
 
 export async function generateMetadata(){

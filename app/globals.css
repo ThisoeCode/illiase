@@ -320,11 +320,10 @@ footer p{font-size:12px}
 /* loading */
 i#loading{
   display:flex;flex-direction:column;
-  background-color:#7777;
   border-radius:18pt;
 }i#loading i{
   width:300pt; height: 200pt;
-  background-color:#ccc;
+  background-color:#7777;
 }
 #mem-skeleton-img{
   height:144px;width:144px;
