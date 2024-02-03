@@ -6,6 +6,13 @@ const {OAUTH_DB_NAME,OAUTH_GOOGLE_CLIENT_ID:googleId,OAUTH_GOOGLE_CLIENT_SC:goog
 
 
 // CONFIG
+  /**
+   * Trust the oauth provider to correctly verify email addresses & opt-in to account linking even when the user is not signed-in
+   * {@link https://github.com/nextauthjs/next-auth/blob/main/packages/core/src/lib/actions/callback/handle-login.ts#L198}
+   * @description On sign-up, if the provider returns an email that is already exists in accounts collection, auto-link this account to the existing account.
+  */
+  const allowDangerousEmailAccountLinking = true
+
 /** @type {import("next-auth").NextAuthConfig} */
 export const authConfig = {
 
@@ -13,11 +20,14 @@ export const authConfig = {
     GoogleProvider({
       clientId: googleId,
       clientSecret: googleSc,
+      allowDangerousEmailAccountLinking,
     }),
+
     GitHubProvider({
       clientId: ghId,
       clientSecret: ghSc,
-    })
+      allowDangerousEmailAccountLinking,
+    }),
   ],
 
   adapter: MongoDBAdapter(clientPromise,{databaseName:OAUTH_DB_NAME}),
@@ -29,13 +39,6 @@ export const authConfig = {
       return !!1
     },
   },
-
-  /**
-   * Trust the oauth provider to correctly verify email addresses & opt-in to account linking even when the user is not signed-in
-   * {@link allowdangerousemailaccountlinking https://github.com/nextauthjs/next-auth/blob/main/packages/core/src/lib/actions/callback/handle-login.ts#L198}
-   * @description On sign-up, if the provider returns an email that is already exists in accounts collection, auto-connect this account to the existing account.
-  */
-  allowdangerousemailaccountlinking: true,
 }
 
 
