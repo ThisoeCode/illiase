@@ -29,6 +29,13 @@ export const authConfig = {
       return !!1
     },
   },
+
+  /**
+   * Trust the oauth provider to correctly verify email addresses & opt-in to account linking even when the user is not signed-in
+   * {@link allowdangerousemailaccountlinking https://github.com/nextauthjs/next-auth/blob/main/packages/core/src/lib/actions/callback/handle-login.ts#L198}
+   * @description On sign-up, if the provider returns an email that is already exists in accounts collection, auto-connect this account to the existing account.
+  */
+  allowdangerousemailaccountlinking: true,
 }
 
 

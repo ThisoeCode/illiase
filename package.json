@@ -1,6 +1,8 @@
 {
   "name": "illiase-app-route",
   "version": "0.2.0",
+  "discription": "Illiase members' works showcase blog",
+  "repository": "https://github.com/ThisoeCode/illiase",
   "private": true,
   "scripts": {
     "dev": "next dev",
