@@ -1,6 +1,7 @@
 NextdayMission:
   Todo:
     ☐ Make decision of posts structure & workflow
+    ✔ README.md Roadmap @done(24-02-03 13:35)
       1. Post system:
         ☐ Client `/post`
       2. Surface:
@@ -15,7 +16,7 @@ NextdayMission:
     ☐ Store member avatars on S3 
 
 Version:
-  @[0.1.8.21] 
+  @[0.2.1.1] 
 
 DoLater:
   ☐ Page top loading bar https://medium.com/@garadiya0/how-to-add-a-top-loading-bar-in-next-js-ed56a13c78d
