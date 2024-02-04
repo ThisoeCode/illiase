@@ -1,5 +1,7 @@
-切换语言：
+切换语言： 
+
 [![en](https://img.shields.io/badge/lang-English-blue.svg)](https://github.com/ThisoeCode/illiase/blob/main/README.md)
+[![zh-Hans](https://img.shields.io/badge/lang-简体中文-red.svg)](https://github.com/ThisoeCode/illiase/blob/main/README.zh-Hans.md)
 <!-- https://www.w3schools.com/tags/ref_language_codes.asp -->
 
 # 伊利亚斯官网 (建设中)
