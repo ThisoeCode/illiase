@@ -21,20 +21,6 @@ export async function insu() {
   return { client: cachedClient, db: cachedDb }
 }
 
-/*
-  async function run() {
-    try {
-      // Ping to confirm a successful connection
-      await client.db("admin").command({ ping: 1 })
-      console.log("[Illiase] Pinged MongoDB")
-    } finally {
-      // Ensures that the client will close when you finish/error
-      await client.close()
-    }
-  }
-  run().catch(console.dir)
-*/
-
 
 // @auth/mongodb-adapter connection requirement (from https://authjs.dev/reference/adapter/mongodb tips)
 let clientPromise

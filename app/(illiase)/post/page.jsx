@@ -6,9 +6,9 @@ export const metadata = {
   title: 'Post',
 }
 
-export default async function IlliasePost(){
+export default function IlliasePost(){
   return (<>{
-    await isIlliaseMem(
+    isIlliaseMem(
       _=>{return <MemsPostPage/>},
       _=>{redirect(`/cnct?post`)}, /** @todo REDIRECT TO BE ACCEPTED: `?post` */
       _=>{redirect('/login?post')}, /** @todo REDIRECT TO BE ACCEPTED: `?post` */

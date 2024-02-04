@@ -1,6 +1,10 @@
+Version:
+  @[0.2.1.1]
+
 NextdayMission:
   Todo:
     ☐ Make decision of posts structure & workflow
+    ☐ Translate README.md (`en`,`zh`)
     ✔ README.md Roadmap @done(24-02-03 13:35)
       1. Post system:
         ☐ Client `/post`
@@ -8,15 +12,24 @@ NextdayMission:
 
       3. Works:
 
+      4. (CSS):
 
 
+  To learn:
     ☐ MongoDB NextJS tut
     AWS:
-    ☐ Learn and make a S3 bucket on AWS
-    ☐ Store member avatars on S3 
+      ✔ Learn and make a S3 bucket on AWS @done(24-02-03 19:11)
+      ✔ Store member avatars on S3 @done(24-02-04 11:15)
+      ☐ Automation of storing work imgs and member avatars on S3
+      ☐ NextJS deploy on aws tut
+        1:
+          `https://youtu.be/7PoKyVCTcS8?si=ErhH-PkxdWxMWr2q`
+        2:
+          `AWS Amplify`
 
-Version:
-  @[0.2.1.1] 
+    not:
+      ☐ Translate README.md (`ko`)
+      ☐ Translate README.md (`ja`)
 
 DoLater:
   ☐ Page top loading bar https://medium.com/@garadiya0/how-to-add-a-top-loading-bar-in-next-js-ed56a13c78d

@@ -49,10 +49,12 @@ export const { handlers, auth, signIn, signOut } = NextAuth(authConfig)
 
 // ISMEM
 /**
- * @param {Function} isMem - When is a mem, callback
- * @param {Function} notMem - When is not a mem, callback
- * @param {Function} notAuth - When is not logged in, callback
- * @returns {true|false|null}
+ * Checks if the current user is a member of Illiase.
+ *
+ * @param {Function} isMem - Callback when the user is a member.
+ * @param {Function} notMem - Callback when the user is not a member.
+ * @param {Function} notAuth - Callback when the user is not authenticated.
+ * @returns {boolean|null} - Returns true if the user is a member, false if not, and null if not authenticated.
  */
 export async function isIlliaseMem(
   isMem =_=> {return true},
@@ -62,10 +64,29 @@ export async function isIlliaseMem(
   const memEmails = process.env.MEM_EMAIL.split(',')
   const session = await auth()
   if (session&&session.user) {
-    if (memEmails.includes(session.user.email)) {
+    if (memEmails.includes( session.user.email.toLowerCase() )) {
       return isMem()
     }
     return notMem()
   }
   return notAuth()
+}
+
+/**
+ * @param {Function} authed - Callback when the user is logged in.
+ * @param {Function} notAuthed - Callback when the user is logged out.
+ * @returns {boolean}
+ */
+export async function isAuthed(
+  authed =_=> {return true},
+  notAuthed =_=> {return false},
+){
+  const isMemF = isIlliaseMem()
+  switch (isMemF) {
+    case true:
+    case false:
+      return authed()
+    case null:
+      return notAuthed()
+  } 
 }
