@@ -1,5 +1,6 @@
 切换语言：
-[![英语](https://img.shields.io/badge/lang-English-blue.svg)](https://github.com/ThisoeCode/illiase/blob/main/README.en.md)
+[![en](https://img.shields.io/badge/lang-English-blue.svg)](https://github.com/ThisoeCode/illiase/blob/main/README.md)
+<!-- https://www.w3schools.com/tags/ref_language_codes.asp -->
 
 # 伊利亚斯官网 (建设中)
 伊利亚斯官网目前正在开发中...

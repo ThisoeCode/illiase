@@ -1,5 +1,6 @@
 Switch languages:
-[![Simplified Chinese](https://img.shields.io/badge/lang-简体中文-darkgreen.svg)](https://github.com/ThisoeCode/illiase/blob/main/README.zh-hans.md)
+[![zh-Hans](https://img.shields.io/badge/lang-简体中文-red.svg)](https://github.com/ThisoeCode/illiase/blob/main/README.zh-Hans.md)
+<!-- https://www.w3schools.com/tags/ref_language_codes.asp -->
 
 # The Illiase Platform (building)
 The Illiase Platform is under development.
