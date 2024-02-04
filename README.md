@@ -38,8 +38,8 @@ The Illiase Platform web application (this repository) is the official platform 
 
 ### Illiase Account
 - There are 2 kinds of accounts: Member & Visitor.
-- [^1] Members can post [Posts](#works-and-posts).
-- [^1] Visitors can write comments on [Posts](#works-and-posts).
+- [^1] Members can post [Posts](#1-works-and-posts).
+- [^1] Visitors can write comments on [Posts](#1-works-and-posts).
 - The only way to join as a Member is to contact us.
 - User ID is the email address provided by authentication providers (Google and GitHub).
 - Member accounts have another unique identifier: Illiase ID.
