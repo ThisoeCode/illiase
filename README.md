@@ -24,6 +24,7 @@ About the Illiase Project and this web application, please read our [documentati
 | 0.9.x | Change languages (`en`, `zh`, `ja`, `ko`) | - | `planned` |
 | 1.0.x | LAUNCH TEST | - | `goal` |
 | 1.1.x | LAUNCH | - | `goal` |
+| 1.x.x | Fav post | [X](https://x.com)'s Bookmark | `idea` |
 | 2.?.x | Linking metadata (title & thumbnail) for Discord, X... | - | `idea` |
 | 2.?.x | Searching engine metadata feeding | - | `idea` |
 | 3.?.x | Customized Members’ page | - | `idea` |
